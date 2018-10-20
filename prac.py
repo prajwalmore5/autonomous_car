@@ -1,12 +1,12 @@
 import cv2
 import numpy as np
 
-vid=cv2.VideoCapture('road_car_view.mp4')
+vid=cv2.VideoCapture('car.mp4')
 
 while True:
     ret ,frame=vid.read()
     if not ret:
-        vid=cv2.VideoCapture('road_car_view.mp4')
+        vid=cv2.VideoCapture('car.mp4')
         continue
     gray=cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
     low_yellow=np.array([18,94,140])
